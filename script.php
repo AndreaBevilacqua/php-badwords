@@ -8,6 +8,7 @@ echo "<p>" . strlen($paragraph) . "</p>";
 
 $censoredParagraph = str_replace($censoredParagraph, '***', $paragraph);
 
-
+echo "<p> $censoredParagraph</p>";
+echo "<p>" . strlen($censoredParagraph) . "</p>";
 
 ?>
