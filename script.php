@@ -3,7 +3,7 @@
 $paragraph = $_GET["paragraph"];
 $word = $_GET["word"];
 
-$censoredParagraph = str_replace($censoredParagraph, '***', $paragraph);
+$censoredParagraph = str_replace($word, '***', $paragraph);
 
 ?>
 
