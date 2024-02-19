@@ -1,14 +1,26 @@
 <?php 
 
-$paragraph = $_POST["paragraph"];
-$word = $_POST["word"];
-
-echo "<p>$paragraph</p>";
-echo "<p>" . strlen($paragraph) . "</p>";
+$paragraph = $_GET["paragraph"];
+$word = $_GET["word"];
 
 $censoredParagraph = str_replace($censoredParagraph, '***', $paragraph);
 
-echo "<p> $censoredParagraph</p>";
-echo "<p>" . strlen($censoredParagraph) . "</p>";
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Paragrafo originale</h3>
+    <p><?= $paragraph?></p>
+    <em>Il paragrafo originale é lungo <?= mb_strlen($paragraph)?> caratteri</em>
+    <br>
+    <h3>Paragrafo censurato</h3>
+    <p><?= $censoredParagraph?></p>
+    <em>Il paragrafo originale é lungo <?= mb_strlen($censoredParagraph)?> caratteri</em>
+</body>
+</html>
